@@ -1,0 +1,18 @@
+meta {
+  name: Send invalid chat message
+  type: ws
+  seq: 2
+}
+
+ws {
+  url: ws://127.0.0.1:3000/ws
+  auth: none
+}
+
+body:ws {
+  name: invalid chat message
+  type: json
+  content: '''
+    {}
+  '''
+}

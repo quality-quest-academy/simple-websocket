@@ -45,6 +45,8 @@
       border-radius: .75rem;
       background: #f7faf9;
     }
+    .room-controls { display: flex; justify-content: flex-end; margin-top: -.75rem; }
+    #clear-chat { padding: .375rem .75rem; border-color: #a8bdb6; background: white; color: #175e49; }
     #empty { margin: 0; color: #4f6560; }
     #messages { margin: 0; padding: 0; list-style: none; }
     #messages li { overflow-wrap: anywhere; }
@@ -76,6 +78,9 @@
       <div class="room">
         <p id="empty">No messages yet.</p>
         <ul id="messages" role="log" aria-label="Chat messages"></ul>
+      </div>
+      <div class="room-controls">
+        <button id="clear-chat" type="button">Clear chat</button>
       </div>
 
       <label for="message">Message</label>

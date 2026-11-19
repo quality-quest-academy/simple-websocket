@@ -5,7 +5,13 @@ const message = document.querySelector('#message');
 const send = document.querySelector('#send');
 const messages = document.querySelector('#messages');
 const empty = document.querySelector('#empty');
+const clearChat = document.querySelector('#clear-chat');
 const feedback = document.querySelector('#feedback');
+
+clearChat.addEventListener('click', () => {
+  messages.replaceChildren();
+  empty.hidden = false;
+});
 
 const socketUrl = new URL('/ws', window.location.href);
 socketUrl.protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';

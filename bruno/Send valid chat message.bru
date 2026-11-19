@@ -1,0 +1,22 @@
+meta {
+  name: Send valid chat message
+  type: ws
+  seq: 1
+}
+
+ws {
+  url: ws://127.0.0.1:3000/ws
+  auth: none
+}
+
+body:ws {
+  name: valid chat message
+  type: json
+  content: '''
+    {
+      "type": "chat",
+      "name": "Ada",
+      "text": "Hello from Bruno!"
+    }
+  '''
+}
