@@ -24,9 +24,3 @@ Connect to `ws://127.0.0.1:3000/ws` and send a text frame containing JSON.
 The server trims `name` and `text` and broadcasts the same object to every connected client, including the sender. Use a name of 1–24 characters and a message of 1–500 characters. For malformed JSON or an invalid message, the sender gets an object with `type: "error"` and a `message` string. Frames over 16 KiB close the connection.
 
 Open the `bruno` folder as a collection in Bruno while the server is running. It includes a valid chat message and an invalid message to demonstrate the error response.
-
-## Practice ideas
-
-- In Playwright, open two pages and verify that each sees a message sent by the other.
-- In Playwright, reload one page and verify that its conversation starts empty.
-- In Bruno, send the example above, then send `{}` and compare the responses.
